@@ -34,5 +34,5 @@ function newton(int $a, int $b, int $c, int $maxIterations = 1000, float $epsilo
             $root -= ($a*$root**2 + $b*$root + $c)/(2*$a*$root + $b);
         }
     }
-    return $results != [] ? $results : null;
+    return $results ? $results : null;
 }
