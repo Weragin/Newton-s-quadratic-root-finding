@@ -5,4 +5,4 @@ This is going to be a web application that approximates the roots of a polynomia
 TBA
 
 # Features
-We only have the function for approximating roots of a quadratic polynoial right now
+We only have the function for approximating roots of a quadratic polynomial right now.
