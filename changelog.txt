@@ -1,0 +1,1 @@
+version 0.0.1 - Added the newton function, which could only solve quadratic equations at the time
