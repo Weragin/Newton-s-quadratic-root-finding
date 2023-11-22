@@ -22,7 +22,7 @@ function newton(int $a, int $b, int $c, int $maxIterations = 1000, float $epsilo
     foreach ([$root1, $root2] as $root) {
         $last_root = 0;
 
-        //todo: rewrite, such that the loop doesn't run twice if there are no roots and remove doubled roots
+        //todo: rewrite, such that the loop doesn't run twice if there are no roots
         for ($i = 0; $i < $maxIterations; $i++) {
             if (abs($root - $last_root) < $epsilon) {
                 $root = (int) round($root);
