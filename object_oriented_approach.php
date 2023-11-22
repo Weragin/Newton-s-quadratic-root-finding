@@ -3,7 +3,7 @@
 /**
  * Respresents a quadratic function described by its coefficients with methods for finding the roots.
  */
-Class QuadraticFunction {
+Class QuadraticPolynomial {
     private int $a, $b, $c;
     private array $roots;
 
