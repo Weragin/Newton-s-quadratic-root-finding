@@ -12,7 +12,7 @@
  * @param float $epsilon The precision of approximation.
  * @return array<int>|null Either the roots of function or null for no roots
  */
-function newton(int $a, int $b, int $c, int $maxIterations = 1000, float $epsilon = 1e-2): array|null {
+function newton(int $a, int $b, int $c, int $maxIterations = 1000, float $epsilon = 1e-2): array {
     // Cauchy's bound of a polynomial is always greater than or equal to the absolute values of each roots of the polynomial.
     $cauchy_bound = 1 + max(abs($b), abs($c))/$a;
     $root1 = -$cauchy_bound;
@@ -22,7 +22,7 @@ function newton(int $a, int $b, int $c, int $maxIterations = 1000, float $epsilo
     foreach ([$root1, $root2] as $root) {
         $last_root = 0;
 
-        //todo: rewrite, such that the loop doesn't run twice if there are no roots and remove doubled roots
+        //todo: rewrite, such that the loop doesn't run twice if there are no roots
         for ($i = 0; $i < $maxIterations; $i++) {
             if (abs($root - $last_root) < $epsilon) {
                 $root = (int) round($root);
@@ -34,5 +34,5 @@ function newton(int $a, int $b, int $c, int $maxIterations = 1000, float $epsilo
             $root -= ($a*$root**2 + $b*$root + $c)/(2*$a*$root + $b);
         }
     }
-    return $results ? $results : null;
+    return isset($results[0]) && $results[0] === $results[1] ? [$results[0]] : $results;
 }
