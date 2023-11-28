@@ -1,8 +1,1 @@
 version 0.0.1 - Added the newton function, which could only solve quadratic equations at the time
-version 0.0.2 - Tweaked the newton function for more type consistency.
-              - Added class representation of quadratic polynomials.
-              - Realised I could have just called the outside function newton()
-                in the method solveWithNewton() of QuadraticPolynomial instead of
-                copy/pasting the entirety of code, but was too lazy to change it back,
-                since at that point, the two functions were different anyway. (bet im
-                going to change it in the next version anyway)
